@@ -21,6 +21,48 @@ section {
   align-content: center;
 }
 
+/*header*/
+
+#nav {
+    display: flex;
+    position: fixed;
+    background-color: rgb(41, 41, 41);
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  #nav h1 {
+    font-size: 30px;
+    color: white;
+    opacity: 0.80;
+    margin-left: 1%;
+  }
+  
+  #nav ul {
+    list-style-type: none;
+    overflow: hidden;
+  } 
+    
+  #nav li {
+    float: left;
+  }
+    
+  #nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  #nav li a:hover {
+    background-color: #111;
+  }
+  
+  #nav li button:hover {
+    background-color: #111;
+  }
+
 /*home section*/
 
 #home-section{
@@ -43,13 +85,7 @@ section {
     object-fit: cover;
     z-index: -2;
     opacity: 1;
-    -moz-transition: opacity 2s ease-in-out;
-    -webkit-transition: opacity 2s ease-in-out;
-    -ms-transition: opacity 2s ease-in-out;
     transition: opacity 2s ease-in-out;
-    -moz-transition-delay: 0.5s;
-    -webkit-transition-delay: 0.5s;
-    -ms-transition-delay: 0.5s;
     transition-delay: 0.5s;
   }
 
@@ -61,21 +97,9 @@ section {
   }
 
   #home-section h1{
-    -moz-transition: opacity 0.8s ease, -moz-transform 0.8s ease, -moz-filter 0.25s ease;
-    -webkit-transition: opacity 0.8s ease, -webkit-transform 0.8s ease, -webkit-filter 0.25s ease;
-    -ms-transition: opacity 0.8s ease, -ms-transform 0.8s ease, -ms-filter 0.25s ease;
     transition: opacity 0.8s ease, transform 0.8s ease, filter 0.25s ease;
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
     transform: translateX(0);
-    -moz-transition-delay: 1.5s;
-    -webkit-transition-delay: 1.5s;
-    -ms-transition-delay: 1.5s;
     transition-delay: 1.5s;
-    -moz-filter: blur(0);
-    -webkit-filter: blur(0);
-    -ms-filter: blur(0);
     filter: blur(0);
     opacity: 0.85;
 
@@ -86,21 +110,9 @@ section {
   }
 
   #home-section h2 {
-    -moz-transition: opacity 0.8s ease, -moz-transform 0.8s ease, -moz-filter 0.25s ease;
-    -webkit-transition: opacity 0.8s ease, -webkit-transform 0.8s ease, -webkit-filter 0.25s ease;
-    -ms-transition: opacity 0.8s ease, -ms-transform 0.8s ease, -ms-filter 0.25s ease;
     transition: opacity 0.8s ease, transform 0.8s ease, filter 0.25s ease;
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
     transform: translateX(0);
-    -moz-transition-delay: 1.75s;
-    -webkit-transition-delay: 1.75s;
-    -ms-transition-delay: 1.75s;
     transition-delay: 1.75s;
-    -moz-filter: blur(0);
-    -webkit-filter: blur(0);
-    -ms-filter: blur(0);
     filter: blur(0);
     opacity: 0.85;
 
@@ -118,25 +130,13 @@ section {
 
   #home-section.hidden h1 {
     opacity: 0;
-    -moz-transform: translateX(0.25em);
-    -webkit-transform: translateX(0.25em);
-    -ms-transform: translateX(0.25em);
     transform: translateX(0.25em);
-    -moz-filter: blur(2px);
-    -webkit-filter: blur(2px);
-    -ms-filter: blur(2px);
     filter: blur(2px);
   }
 
 
   #home-section.hidden.hidden h2 {
     opacity: 0;
-    -moz-transform: translateX(0.25em);
-    -webkit-transform: translateX(0.25em);
-    -ms-transform: translateX(0.25em);
     transform: translateX(0.25em);
-    -moz-filter: blur(2px);
-    -webkit-filter: blur(2px);
-    -ms-filter: blur(2px);
     filter: blur(2px);
   }
