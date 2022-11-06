@@ -1,2 +1,2 @@
 # Personal website
-> Link to website: [ralfs.upelnieks.lv](https://ralfs.upelnieks.lv)
+> Website link: [ralfs.upelnieks.lv](https://ralfs.upelnieks.lv)
