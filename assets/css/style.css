@@ -12,13 +12,18 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body {
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(17, 17, 17);
   font-family: 'Oswald', sans-serif;
   font-size: var(--fs-400);
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 section {
@@ -44,31 +49,35 @@ section {
 
 /*header*/
 
-#nav {
+#header {
   display: flex;
   position: fixed;
-  background-color: rgb(41, 41, 41);
+  transition: background-color 0.2s ease-in-out, filter 0.25s ease;;
+  background-color: rgba(0, 0, 0, .4);
+  backdrop-filter: blur(10px); 
   width: 100%;
   justify-content: space-between;
+  z-index: 2;
 }
   
-  #nav h1 {
+  #header h1 {
     font-size: 30px;
     color: white;
+    transition: opacity 1s ease;
     opacity: 0.80;
     margin-left: 1%;
   }
   
-  #nav ul {
+  #header ul {
     list-style-type: none;
     overflow: hidden;
   } 
     
-  #nav li {
+  #header li {
     float: left;
   }
     
-  #nav li a {
+  #header li a {
     display: block;
     color: white;
     text-align: center;
@@ -76,13 +85,22 @@ section {
     text-decoration: none;
   }
   
-  #nav li a:hover {
+  #header li a:hover {
     background-color: #111;
   }
   
-  #nav li button:hover {
+  #header li button:hover {
     background-color: #111;
   }
+
+#header.alt {
+  background-color: transparent;
+  backdrop-filter: none; 
+  background: none;
+}
+#header.alt h1 {
+  opacity: 0;
+}
 
 /*home section*/
 
@@ -91,8 +109,8 @@ section {
   position: relative;
   place-items: end;
   min-height: 100vh;
-  z-index: -1;
   background-color: black;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.87);
 }
 
   #home-section video {
@@ -104,7 +122,6 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -2;
     opacity: 1;
     transition: opacity 2s ease-in-out;
     transition-delay: 0.5s;
@@ -129,8 +146,6 @@ section {
     transition-delay: 1.75s;
     filter: blur(0);
     opacity: 0.85;
-
-
     font-size: var(--fs-h2);
     color: white;
     margin-right: 10%;
@@ -147,7 +162,7 @@ section {
     filter: blur(2px);
   }
 
-  #home-section.hidden.hidden h2 {
+  #home-section.hidden h2 {
     opacity: 0;
     transform: translateX(0.25em);
     filter: blur(2px);
@@ -171,7 +186,7 @@ section {
   }
   
 #about-me-text {
-  color: black;
+  color: rgb(194, 194, 194);
   width: 80%;
   margin-bottom: auto;
   margin-top: auto;
@@ -194,7 +209,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: white;
+  background-color: rgb(235, 235, 235);
 }
 
   #projects-section h1 {
@@ -204,13 +219,17 @@ section {
     font-size: var(--fs-h2);
   }
 
-  .grid {
-    width: 100%;
-    max-width: 1920px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  #projects-section a {
+    margin-top: 0.5%;
   }
+
+.grid {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
   
 .card {
   margin: 40px;
