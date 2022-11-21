@@ -33,6 +33,18 @@ section {
   align-content: center;
 }
 
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+p {
+  font-size: var(--fs-p);
+}
+
 .Button {
   padding: 10px;
   padding-top: 10px;
@@ -133,8 +145,6 @@ section {
     transition-delay: 1.5s;
     filter: blur(0);
     opacity: 0.85;
-
-    font-size: var(--fs-h1);
     color: white;
     margin-right: 10%;
     user-select: none;
@@ -146,7 +156,6 @@ section {
     transition-delay: 1.75s;
     filter: blur(0);
     opacity: 0.85;
-    font-size: var(--fs-h2);
     color: white;
     margin-right: 10%;
     user-select: none;
@@ -174,7 +183,6 @@ section {
   max-width: 80%;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1rem;
-  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -194,12 +202,7 @@ section {
 }
   
   #about-me-text h2 {
-    font-size: var(--fs-h2);
     margin-bottom: 5%;
-  }
-  
-  #about-me-text p {
-    font-size: var(--fs-p);
   }
 
 /*Project section*/
@@ -209,14 +212,13 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(255, 255, 255);
 }
 
-  #projects-section h1 {
+  #projects-section h2 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2%;
-    font-size: var(--fs-h2);
   }
 
   #projects-section a {
@@ -280,6 +282,41 @@ section {
   text-decoration: none;
   margin: 14px;
 }
+
+/* skills section */
+
+#skills-section{
+  background-color: rgb(255, 255, 255);
+}
+
+#skills-container {
+  display: grid;
+  max-width: 80%;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  font-size: 20px;
+}
+
+  #skills-section h2{
+    margin-bottom: 30px;
+  }
+
+  #skills-section p{
+    color: rgb(65, 65, 65);
+  }
+
+  #skills-section ul{
+    list-style-type: none;
+  }
+
+  #skills-section li{
+    margin-bottom: 20px;
+  }
+
 
 /*Screen sizing*/
 
